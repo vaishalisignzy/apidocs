@@ -2,6 +2,8 @@
 
 The ROC File Download API is a service that is part of the Download File By CIN service. Whenever certain files belonging to regulatory filings of a Company/LLP like Certificate of Incorporation (CoI) or Memorandum of Association (MoA) needs to be retrieved for a company, this API is used to initiate the request for download.
 
+&#x20;
+
 ### Introduction
 
 Corporate Identification Number is abbreviated as CIN it's **a unique identification number that is assigned by the ROC** (Registrar of Companies) of various states under the MCA (Ministry of Corporate Affairs) to the registered companies. Using the CIN, this API can retrieve the regulatory filings of the company.
@@ -14,16 +16,20 @@ This API is used to retrieve basic details about the company just by entering th
 * Memorandum of Association (MOA)
 * Article of Association (AOA)
 
+
+
 ### How to call the API
 
 Before going for ROC file download API for organizations, you first need to create an '_Organization'_ **object** and you need to pass the _CIN_ as an **identifier** in the request body.
+
+
 
 ### API Input Guidelines
 
 Provide correct CIN, it is **a unique 21 digit alpha-numeric number** provided to every registered company by the **ROC (Registrar of Companies).**
 
 {% hint style="info" %}
-You can get CIN from our API [Search by Company Name](search-by-company-name.md)
+You can get CIN from our API [Search by Company Name](search-by-company-name.md)&#x20;
 {% endhint %}
 
 ###
@@ -34,14 +40,15 @@ You can get CIN from our API [Search by Company Name](search-by-company-name.md)
 
 {% tabs %}
 {% tab title="Input Parameters" %}
-
+| Parameter Name | Required/Optional | Data Type | Description |
+| -------------- | ----------------- | --------- | ----------- |
 {% endtab %}
 
 {% tab title="CURL Request" %}
 ```
 ```
 
-
+####
 {% endtab %}
 {% endtabs %}
 
@@ -62,12 +69,15 @@ You can get CIN from our API [Search by Company Name](search-by-company-name.md)
 {% endtab %}
 {% endtabs %}
 
-### \*\*\*\*
+### ****
 
 ### **Step 2**: Hunt for Organisation
 
 {% tabs %}
 {% tab title="Input Parameters" %}
+| Parameter Name | Required/Optional | Data Type | Description |
+| -------------- | ----------------- | --------- | ----------- |
+
 
 {% endtab %}
 
@@ -94,6 +104,8 @@ You can get CIN from our API [Search by Company Name](search-by-company-name.md)
 {% endtab %}
 {% endtabs %}
 
+
+
 ### **HTTP Response Codes**
 
 | Status Code | Description                            |
@@ -104,40 +116,49 @@ You can get CIN from our API [Search by Company Name](search-by-company-name.md)
 | **401**     | unauthorised                           |
 | **422**     | processable entity                     |
 
+
+
 #### Creating Organization Object
 
 {% swagger baseUrl="https://preproduction.signzy.tech" path="/api/v2/patrons/...patronId.../organizations" method="post" summary="Search Company Regulatory Filings by CIN" %}
 {% swagger-description %}
 **Production URL:**
 
-\\
+\
+
+
+
 
 `https://signzy.tech/api/v2/patrons/...patronId.../organizations`
 
-\\
+\
 
-\\
+
+
+
+\
+
 
 This method is used to search for a company's regulatory filings by its Company identification Number (CIN)
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="object" required="false" %}
+{% swagger-parameter in="header" name="Authorization" type="object" %}
 Access Token
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-type" type="string" required="false" %}
+{% swagger-parameter in="header" name="Content-type" type="string" %}
 Application/JSON
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="identifier" type="string" required="false" %}
+{% swagger-parameter in="body" name="identifier" type="string" %}
 Contains the unique identifier ID
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="service" type="string" required="false" %}
+{% swagger-parameter in="body" name="service" type="string" %}
 Type of service - roc
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="callbackURL" type="string" required="false" %}
+{% swagger-parameter in="body" name="callbackURL" type="string" %}
 The call back URL
 {% endswagger-parameter %}
 
@@ -185,42 +206,49 @@ Use the following exchange parameters for ROC search
 {% swagger-description %}
 **Production URL:**
 
-\\
+\
+
+
+
 
 `https://signzy.tech/api/v2/hunts`
 
-\\
+\
 
-\\
+
+
+
+\
+
 
 This method creates a File Download Hunt request
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
 Application/JSON
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="target" type="string" required="false" %}
+{% swagger-parameter in="body" name="target" type="string" %}
 Organization
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="itemId" type="string" required="false" %}
+{% swagger-parameter in="body" name="itemId" type="string" %}
 id-of-the-organzation-object-created
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="accessToken" type="string" required="false" %}
+{% swagger-parameter in="body" name="accessToken" type="string" %}
 access-token-from-the-organization-creation-request
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="Task" type="string" required="false" %}
+{% swagger-parameter in="body" name="Task" type="string" %}
 Task to be performed - fileDownloadByCin
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials" type="object" required="false" %}
+{% swagger-parameter in="body" name="essentials" type="object" %}
 Contains essential input data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials.cin" type="string" required="false" %}
+{% swagger-parameter in="body" name="essentials.cin" type="string" %}
 company's-cin-to-search-for
 {% endswagger-parameter %}
 
@@ -250,6 +278,7 @@ company's-cin-to-search-for
     	"cin": ".....company's-cin-to-search-for...."
     }
   }
+
 ```
 {% endtab %}
 
@@ -262,4 +291,4 @@ company's-cin-to-search-for
 {% endtab %}
 {% endtabs %}
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/2ee7c3a566d899966273)
+&#x20;[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/2ee7c3a566d899966273)

@@ -19,6 +19,8 @@ Use the following exchange parameters for Entity Onboarding Delete Request
 | task                 | to delete the verification data |
 | essentials           | contains the input data         |
 | essentials.requestId | contains the request Id         |
+
+
 {% endtab %}
 
 {% tab title="Sample cURL Request" %}
@@ -40,17 +42,21 @@ curl 'https://signzy.tech/api/v2/patrons/<patron-id>/entityonboardings'
 
 {% tabs %}
 {% tab title="Output Parameters" %}
-| Parameters | Description |
-| ---------- | ----------- |
-|            |             |
-|            |             |
-|            |             |
+| Parameters  | Description |
+| ----------- | ----------- |
+|             |             |
+|             |             |
+|             |             |
+
+
 {% endtab %}
 
 {% tab title="Sample API Response" %}
 ```
 // Some code
 ```
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -59,24 +65,24 @@ curl 'https://signzy.tech/api/v2/patrons/<patron-id>/entityonboardings'
 This method is used for entity onboarding delete request..
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="object" required="false" %}
+{% swagger-parameter in="header" name="Authorization" type="object" %}
 Contains the access token which is returned as id field of login request
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-type" type="object" required="false" %}
+{% swagger-parameter in="header" name="Content-type" type="object" %}
 Application/JSON
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="task" type="string" required="false" %}
+{% swagger-parameter in="body" name="task" type="string" %}
 Type of task performed - delete Request
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials" type="object" required="false" %}
+{% swagger-parameter in="body" name="essentials" type="object" %}
 Contains essential input data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials.requestID" type="string" required="false" %}
-Contains the unique delete request ID
+{% swagger-parameter in="body" name="essentials.requestID" type="string" %}
+Contains the unique delete request ID	
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -87,6 +93,7 @@ Contains the unique delete request ID
         "statusCode" : 200
     }
 }
+
 
 ```
 {% endswagger-response %}
@@ -101,6 +108,7 @@ Contains the unique delete request ID
         "requestId": "..requestId...."
     }
 }
+
 ```
 {% endtab %}
 
@@ -113,4 +121,5 @@ Contains the unique delete request ID
 {% endtab %}
 {% endtabs %}
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/1f2f9ccbe8bba3c21971)
+&#x20;[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/1f2f9ccbe8bba3c21971)
+

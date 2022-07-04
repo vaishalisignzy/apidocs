@@ -6,7 +6,7 @@ With the Domain Verification API, we can detect any fake domains & the authentic
 
 ### API Usecase
 
-The purpose of this service is to detect the existence of any fake/forged domain that may be used for malpractice or might not be created with the intended purpose. This service checks whether the website is authentic and is being used for conducting the business that it was intended for. This API will consider the following parameters to give the output:-
+The purpose of this service is to detect the existence of any fake/forged domain that may be used for malpractice or might not be created with the intended purpose. This service checks whether the website is authentic and is being used for conducting the business that it was intended for.&#x20;This API will consider the following parameters to give the output:-&#x20;
 
 1. Whois records
 2. Overall website and the main business
@@ -47,7 +47,7 @@ curl --location --request POST 'https://signzy.tech/api/v2/patrons/<patron id>/d
 
 {% tabs %}
 {% tab title="Response Parameters" %}
-#### Output Parameters
+### Output Parameters
 
 | PARAMETERS                     | DESCRIPTION                                                          |
 | ------------------------------ | -------------------------------------------------------------------- |

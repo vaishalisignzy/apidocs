@@ -111,5 +111,8 @@ Pan Number of individual/entity
 
 
 
-[\
-](https://docs.cashfree.com/edit/subscription-status)
+## Try Yourself!
+
+[Click here](https://www.getpostman.com/collections/eeefaa409734e3d5a4b1) to view the Postman collection and import it in postman
+
+## [ ](https://docs.cashfree.com/edit/subscription-status)

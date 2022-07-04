@@ -44,17 +44,21 @@ curl 'https://signzy.tech/api/v2/patrons/<patron-id>/entityonboardings' \
 
 {% tabs %}
 {% tab title="Output Parameters" %}
-| Parameters | Description |
-| ---------- | ----------- |
-|            |             |
-|            |             |
-|            |             |
+| Parameters  | Description |
+| ----------- | ----------- |
+|             |             |
+|             |             |
+|             |             |
+
+
 {% endtab %}
 
 {% tab title="Sample API Response " %}
 ```
 // Some code
 ```
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -63,24 +67,24 @@ curl 'https://signzy.tech/api/v2/patrons/<patron-id>/entityonboardings' \
 This method is used for individual onboarding get request..
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="object" required="false" %}
+{% swagger-parameter in="header" name="Authorization" type="object" %}
 Contains the access token which is returned as id field of login request
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-type" type="object" required="false" %}
+{% swagger-parameter in="header" name="Content-type" type="object" %}
 Application/JSON
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="task" type="string" required="false" %}
+{% swagger-parameter in="body" name="task" type="string" %}
 Type of task performed - get Data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials" type="object" required="false" %}
+{% swagger-parameter in="body" name="essentials" type="object" %}
 Contains essential input data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials.requestID" type="string" required="false" %}
-Contains the unique get request ID
+{% swagger-parameter in="body" name="essentials.requestID" type="string" %}
+Contains the unique get request ID	
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -102,9 +106,11 @@ Contains the unique get request ID
 {% endtab %}
 
 {% tab title="Response Parameters" %}
-#### Output Parameters
 
-**Id card block**
+
+### Output Parameters
+
+#### Id card block
 
 **verificationStatus block**
 
@@ -171,7 +177,7 @@ Contains the unique get request ID
 | -------------- | ---------------------------------- |
 | faceExtraction | Url of the image of extracted face |
 
-**Video block**
+#### Video block
 
 **Final Interference**
 
@@ -219,7 +225,7 @@ Contains the unique get request ID
 | coVariance      | percentage of coVariance between the different face match scores of the snap shot image of the video to the match image. |
 | matchPercentage | Average percentage of face match between different snap shots of the video to the match image .                          |
 
-**Documents block**
+#### Documents block
 
 **verificationData block**
 
@@ -240,5 +246,7 @@ Contains the unique get request ID
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | verified   | Does comparison between the input beneficiaryMobile and beneMobile in verification data.(returns string value i.e."Match/No Match") |
 | message    | Returns message according to the verification result(eg: Verifcation done with Match/No Match result)                               |
+
+
 {% endtab %}
 {% endtabs %}
