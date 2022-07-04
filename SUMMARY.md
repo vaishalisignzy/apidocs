@@ -227,7 +227,7 @@
 ## BBPS universal APIs (Beta)
 
 * [API Flow Chart](bbps-universal-apis-beta/api-flow-chart.md)
-* [The UI  Journey](bbps-universal-apis-beta/the-ui-journey.md)
+* [The UI Journey](bbps-universal-apis-beta/the-ui-journey.md)
 * [Get Biller List](bbps-universal-apis-beta/get-biller-list.md)
 * [Get Biller Details](bbps-universal-apis-beta/get-biller-details.md)
 * [Fetch Biller](bbps-universal-apis-beta/fetch-biller.md)
@@ -238,7 +238,7 @@
 * [Mobile Recharge Payment](bbps-universal-apis-beta/mobile-recharge-payment.md)
 * [Payment Gateway](bbps-universal-apis-beta/payment-gateway.md)
 
-## 💲 E-MANDATES <a href="#eMandates" id="eMandates"></a>
+## 💲 E-MANDATES <a href="#emandates" id="emandates"></a>
 
 * [Introduction](eMandates/introduction.md)
 * [Create eMandate: Default Flow](eMandates/create-emandate-default-flow.md)
@@ -253,3 +253,7 @@
 * [Activate eMandate](eMandates/activate-eMandate.md)
 * [Cancel Charge eMandate](eMandates/cancel-charge-eMandate.md)
 * [Callbacks](eMandates/callbacks.md)
+
+## 206 Compliance
+
+* [Individual Search - 206 Compliance API](206-compliance/cancel-emandate.md)
