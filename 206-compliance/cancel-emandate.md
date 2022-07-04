@@ -35,7 +35,11 @@ The users need to give inputs as per the input guidelines below.
 {% tab title="Sample cURL request" %}
 ```
 curl --location --request POST 'https://api.signzy.app/api/v3/pan/compliance-206-individual-search' \
---header 'Authorization: ..authKey..'
+--header 'Authorization: ..authKey..' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "panNumber":"..panNumber.."
+}'
 ```
 {% endtab %}
 {% endtabs %}
