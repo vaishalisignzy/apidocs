@@ -256,4 +256,4 @@
 
 ## 206 Compliance
 
-* [Individual Search - 206 Compliance API](206-compliance/cancel-emandate.md)
+* [Individual Search - 206 Compliance API](206-compliance/individual.md)

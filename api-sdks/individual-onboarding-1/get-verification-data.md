@@ -6,7 +6,6 @@ Using the unique request ID that was generated in the previous API, the Individu
 
 How to use the API
 
-
 You will need to login before sending request. You are required to pass the access token received from the login call, as an authorization header in the Individual Onboarding GET Request along with essentials and task.
 
 To get the VE response in the "getData" request you have to pass the "requestId" which you will get in the previous input verification data (save) response.
@@ -24,8 +23,6 @@ Use the following exchange parameters for Individual Onboarding Get Request:
 | task                 | to get the data             |
 | essentials           | essential input data        |
 | essentials.requestId | gives the request for an ID |
-
-
 {% endtab %}
 
 {% tab title="Sample cURL Request" %}
@@ -49,7 +46,7 @@ curl https://signzy.tech/api/v2/patrons/....patronid.../individualonboardings
 {% tab title="Output Parameters" %}
 {% tabs %}
 {% tab title="" %}
-#### Id card block
+**Id card block**
 
 **verificationStatus block**
 
@@ -116,7 +113,7 @@ curl https://signzy.tech/api/v2/patrons/....patronid.../individualonboardings
 | -------------- | ---------------------------------- |
 | faceExtraction | Url of the image of extracted face |
 
-#### Video block
+**Video block**
 
 **Final Interference**
 
@@ -164,7 +161,7 @@ curl https://signzy.tech/api/v2/patrons/....patronid.../individualonboardings
 | coVariance      | percentage of coVariance between the different face match scores of the snap shot image of the video to the match image. |
 | matchPercentage | Average percentage of face match between different snap shots of the video to the match image .                          |
 
-#### Documents block
+**Documents block**
 
 **verificationData block**
 
@@ -187,40 +184,32 @@ curl https://signzy.tech/api/v2/patrons/....patronid.../individualonboardings
 | message    | Returns message according to the verification result(eg: Verifcation done with Match/No Match result)                               |
 {% endtab %}
 {% endtabs %}
-
-
-{% endtab %}
-
-{% tab title="Sample API Response" %}
-
 {% endtab %}
 {% endtabs %}
-
-
 
 {% swagger baseUrl="https://signzy.tech" path="/api/v2/patrons/...patronID.../individualonboardings" method="post" summary="Get Verification data" %}
 {% swagger-description %}
 This method is used for individual onboarding get request..
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="object" %}
+{% swagger-parameter in="header" name="Authorization" type="object" required="false" %}
 Contains the access token which is returned as id field of login request
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-type" type="object" %}
+{% swagger-parameter in="header" name="Content-type" type="object" required="false" %}
 Application/JSON
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="task" type="string" %}
+{% swagger-parameter in="body" name="task" type="string" required="false" %}
 Type of task performed - get Data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials" type="object" %}
+{% swagger-parameter in="body" name="essentials" type="object" required="false" %}
 Contains essential input data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="essentials.requestID" type="string" %}
-Contains the unique get request ID	
+{% swagger-parameter in="body" name="essentials.requestID" type="string" required="false" %}
+Contains the unique get request ID
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -628,7 +617,6 @@ Contains the unique get request ID
 
     }
 }
-
 ```
 {% endswagger-response %}
 {% endswagger %}
@@ -646,11 +634,9 @@ Contains the unique get request ID
 {% endtab %}
 
 {% tab title="Response Parameters" %}
+#### Output Parameters
 
-
-### Output Parameters
-
-#### Id card block
+**Id card block**
 
 **verificationStatus block**
 
@@ -717,7 +703,7 @@ Contains the unique get request ID
 | -------------- | ---------------------------------- |
 | faceExtraction | Url of the image of extracted face |
 
-#### Video block
+**Video block**
 
 **Final Interference**
 
@@ -765,7 +751,7 @@ Contains the unique get request ID
 | coVariance      | percentage of coVariance between the different face match scores of the snap shot image of the video to the match image. |
 | matchPercentage | Average percentage of face match between different snap shots of the video to the match image .                          |
 
-#### Documents block
+**Documents block**
 
 **verificationData block**
 
@@ -788,4 +774,3 @@ Contains the unique get request ID
 | message    | Returns message according to the verification result(eg: Verifcation done with Match/No Match result)                               |
 {% endtab %}
 {% endtabs %}
-
