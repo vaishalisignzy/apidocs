@@ -82,7 +82,7 @@ curl --location --request POST 'https://api.signzy.app/api/v3/pan/compliance-206
 | **403**     | Forbidden                      |
 | **422**     | Unprocessable entity           |
 
-{% swagger baseUrl="" path="" method="post" summary="Individual Search" %}
+{% swagger baseUrl="https://api.signzy.app/api/v3/pan/compliance-206-individual-search" path="" method="post" summary="Individual Search" %}
 {% swagger-description %}
 This method takes in pan number of an entity/individual to check for 206 compliance
 {% endswagger-description %}
