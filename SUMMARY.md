@@ -257,3 +257,5 @@
 ## 206 Compliance
 
 * [Individual Search - 206 Compliance API](206-compliance/individual.md)
+* [Bulk Search - 206 Compliance API](206-compliance/individual-1.md)
+* [Bulk Fetch - 206 Compliance API](206-compliance/individual-2.md)
